@@ -1,0 +1,1339 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .3s ease-out;
+    animation: 3s;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #e8786e;
+    --black: #555;
+    --light-color: #777;
+    --bg: #fceae9;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.section{
+    padding: 20px 9%;
+}
+
+.secTitle {
+    text-align: center;
+    font-size: 40px;
+    color: var(--black);
+    font-weight: bold !important;
+    padding-bottom: 30px;
+}
+
+.secTitle span {
+    background-color:var(--bg);
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 0 15px;
+}
+
+/*=============================== Header style start ================================*/
+/*============ Navbar style start ============*/
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+}
+
+
+.logo {
+    font-weight: bold;
+    color: var(--black);
+    font-size: 25px;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: var(--black);
+    transition: .2s;
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+.nav ul li a:hover{
+    color: var(--main-color);
+}
+
+#menuBtn {
+    display: none;
+}
+
+.showNav{
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+/*============ Navbar style start ============*/
+
+/*============ Home style start ============*/
+.header{
+    background-color: #FCEAE9;
+    position: relative;
+    padding-top: 100px;
+}
+
+.header_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_content, .header_image{
+    width: 48%;
+}
+
+.header_content h1 {
+    line-height: 1.8;
+    color: var(--black);
+    font-size: 35px;
+}
+
+.header_content p {
+    font-size: 17px;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.btn{
+    padding: 10px 40px;
+    cursor: pointer;
+    background: var(--main-color);
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    margin-top: 1rem;
+    display: inline-block;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow:hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; 
+    right:0;
+    height: 100%;
+    width:0%;
+    background:var(--black);
+    z-index: -1;
+    transition: .2s ease-out;
+}
+
+.btn:hover::before{
+    left:0;
+    width:100%;
+}
+
+.header_image img{
+    width: 100% ;
+}
+
+.cloud img{
+    width: 100%;
+}
+
+.header .cloud {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   height: 170px;
+   background:url(../image/cloud.png)repeat-x ;
+   background-size: 250rem 18rem;
+   animation: cloud 22s linear infinite;
+}
+
+@keyframes cloud{
+    0%{
+        background-position-x: 0rem;
+    }
+    100%{
+        background-position-x: -250rem;
+    }
+}
+
+.header_cloud-1{
+    opacity: .5;
+    height:220px !important;
+    background-size: 250px 20rem;
+    animation-direction: reverse !important;
+    animation-duration: 25s !important;
+}
+/*============ Home style end ============*/
+/*=============================== Header style end ===============================*/
+
+/*=============================== Main style start ================================*/
+/*============ Services section style start*/
+.services_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.services_block_box{
+    width: 20%;
+
+    padding: 40px 20px;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    border-radius: 15px;
+}
+
+.services_block_box h6 {
+    font-size: 25px;
+    margin-top: 15px;
+    color: var(--black);
+}
+
+.services_block_box p {
+    font-size: 18px;
+    color: var(--black);
+    line-height: 1.4;
+    opacity: 0.8;
+    padding: 10px 5px;
+}
+/*============ Services section style end ============*/
+
+/*============ About section style start ============*/
+.about_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_blockImg, .about_blockContent {
+    width: 48%;
+}
+
+.about_blockImg img {
+    width: 100%;
+}
+
+.about_blockContent h6{
+    color: var(--black);
+    font-size: 30px;
+}
+
+.about_blockContent p{
+    font-size: 17px;
+    color: var(--black);
+    opacity: 0.8;
+    padding: 10px 0;
+    line-height: 1.6;
+}
+
+.iqons_block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.iqons_blockBox {
+    width: 32.5%;
+    border: var(--border);
+    padding: 15px;
+    text-align: center;
+}
+
+.iqons_blockBox  h3 {
+    font-size: 18px;
+    color: var(--black);
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.iqons_block i {
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--main-color);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+/*============ About section style end ============*/
+
+/*============ Portfolio section style start ============*/
+.portfolio_blockBox {
+    border: none !important;
+    padding: 0 !important ;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio_blockBox::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    background: white;
+    clip-path: circle(30% at 93% 0);
+    transition: 0.3s linear;
+    transition: .3s linear;
+}
+
+.portfolio_blockBox:hover::before{
+    clip-path: circle(100%);
+}
+
+.portfolio_blockBox img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover ;
+}
+
+.portfolio_blockBox span{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bolder;
+    font-size: 50px;
+    color:var(--black);
+}
+
+.portfolio_blockBox_content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    transition-delay: .3s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.portfolio_blockBox:hover .portfolio_blockBox_content{
+    top: 0;
+    opacity: 1;
+}
+/*============ Portfolio section style end ============*/
+
+/*============ Pricing section style start ============*/
+.pricng_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricng_blockBox {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   border: var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: 15px;
+   padding: 20px;
+}
+
+.pricng_blockBox_title {
+    color: var(--black);
+    font-size: 25px;
+}
+
+.pricng_blockBox img {
+    margin: 25px 0;
+    height: 150px;
+}
+
+.pricng_blockBox_price{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.pricng_blockBox_price span{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.pricng_blockBox ul {
+    padding: 10px 0;
+}
+
+.pricng_blockBox ul li{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--black);
+    opacity: 0.8;
+}
+/*============ Pricing section style end ============*/
+
+/*============ Review section style start ============*/
+.reviewClents_infoBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.reviewClents_infoBlock_peopleInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.reviewClents_infoBlock_peopleInfo img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 0 !important;
+}
+
+.reviewClents_infoBlock_peopleInfo h6{
+    font-size: 22px;
+    color: var(--black );
+}
+
+.reviewClents_infoBlock_peopleInfo div i {
+    font-size: 16px;
+    color: var(--main-color);
+}
+
+#like {
+    color: var(--bg);
+    font-size: 60px;
+}
+
+.pricng_blockBox p{  
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--light-color);
+    font-style: italic;
+}
+/*============ Review section style end ============*/
+
+/*============ Contact section style end ============*/
+.contact_infoBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_InfoBlockBox {
+    width: 32%;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contact_InfoBlockBox i{
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    color: var(--main-color);
+    background-color: var(--bg);
+    border-radius: 50%;
+}
+
+.contact_InfoBlockBox h6{
+    color: var(--black);
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.contact_InfoBlockBox p a {
+    color: var(--black);
+    opacity: 0.8;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.contact_map_inputBlock {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_mapBlock, .contact_formBlock{
+    width: 49%;
+    height: 500px;
+    border-radius: 10px;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact_mapBlock iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contact_formBlock form .form_item{
+    margin: 10px 0;
+}
+
+.contact_formBlock form .form_item input, .contact_formBlock form .form_item textarea{
+    width: 100%;
+    background-color: #F7F7F7;
+    padding: 10px;
+    border-radius: 8px;
+    border: var(--border);
+    color: var(--black);
+    text-transform: none;
+    font-size: 16px;
+}
+
+.contact_formBlock form .form_item textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact_formBlock button{
+    margin: 0 !important;
+}
+
+.contact_formBlock form .form_item input:focus{
+    background-color: var(--bg);
+    box-shadow: 0 0 4px var(--main-color);
+}
+
+.contact_formBlock form .form_item textarea:focus{
+    background-color: var(--bg);
+    box-shadow: 0 0 4px var(--main-color);
+}
+/*============ Contact section style end ============*/
+/*=============================== Main style end ================================*/
+
+/*=============================== Footer style start ================================*/
+.footer {
+    background-color: var(--bg);
+    padding-bottom: 90px;
+    margin-top: 10px;
+}
+
+.footer_block {
+    display: flex;
+     gap: 45px;
+    align-items: flex-start;
+}
+
+.footer_blockBox {
+    width: 21%;
+}
+
+.footer_blockBox h4{
+    color: var(--black);
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.footer_blockBox ul li {
+    padding: 10px 0;
+}
+
+.footer_boxItem {
+     color: var(--black);
+}
+
+.footer_boxItem i {
+    color: var(--main-color);
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+.footer .footer_block .footer_blockBox ul li:hover .footer_boxItem i{
+    padding-right: 20px;
+}
+
+.lastText {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 10px 10px 10px;
+    color: var(--black);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.lastText span{
+    color: var(--main-color);
+}
+/*=============================== Footer style and ================================*/
+
+
+
+
+
+/*=============================== Media ================================*/
+
+@media(max-width:1750px){
+    .header_cloud-1{
+        height: 140px !important;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 40px;
+    }
+
+    .header_cloud-2{
+        height: 120px !important;
+    }
+
+    .services_block_box p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .services_block_box {
+        width: 20%;
+        padding: 40px 15px;
+    }
+}
+
+@media(max-width:1500px){
+    .section {
+        padding: 20px 6%;
+    }
+
+    .reviewClents_infoBlock_peopleInfo h6 {
+        font-size: 19px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo div i {
+        font-size: 13px;
+    }
+
+    .pricng_blockBox p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:1275px){
+    .btn {
+        font-size: 15px;
+    }
+
+    .services_block_box {
+        width: 23%;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 35px;
+    }
+
+    #like {
+        color: var(--bg);
+        font-size: 42px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo h6 {
+        font-size: 16px;
+    }
+
+    .pricng_blockBox p {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1200px){
+    .section {
+        padding: 20px 6%;
+    }
+
+    .header_content h1 {
+        font-size: 30px;
+    }
+
+    .header_content p {
+        font-size: 16px;
+        line-height: 1.3
+    }
+}
+
+
+@media(max-width:1100px){
+    .section {
+        padding: 20px 4%;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 42px;
+    }
+
+    .header_image img {
+        height: 590px;
+    }
+    
+    .services_block {
+        gap: 20px;
+    }
+
+    .services_block_box {
+        width: 30%;
+    }
+
+    .footer_block {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .footer_blockBox {
+        width: 27%;
+    }
+}
+
+@media(max-width:1000px){
+    .iqons_blockBox h3 {
+        font-size: 14px;
+    }
+
+    .about_blockContent h6 {
+      font-size: 27px;
+    }
+
+    .about_blockContent p {
+        font-size: 14px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo {
+        gap: 5px;
+    }
+
+    .pricng_blockBox {
+        padding: 15px;
+    }
+
+    .section {
+        padding: 20px 2%;
+    }
+    .pricng_blockBox {
+        width: 32.5%;
+    }
+}
+
+@media(max-width:900px){
+    .header_content, .header_image {
+        width: 50%;
+    }   
+
+    .pricng_blockBox ul li {
+        display: block;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .header_content h1 {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .nav ul li a {
+        font-size: 15px;
+    }
+
+    .nav ul {
+        gap: 15px;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 38px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo h6 {
+        font-size: 15px;
+    }
+
+    .reviewClents_infoBlock {
+        flex-direction: column;
+    }
+
+    #like{
+        font-size: 50px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo {
+        gap: 10px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media(max-width:825px){
+    .about_blockImg, .about_blockContent {
+        width: 49%;
+    }
+
+    .iqons_blockBox {
+        padding: 10px;
+    }
+
+    .iqons_blockBox h3 {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:810px){
+    .header_content h1 {
+        font-size: 30px;
+    }
+
+    .footer_blockBox {
+        width: 45%;
+    }
+
+    .contact_infoBlock{
+        flex-wrap: wrap;
+    }
+
+    .contact_InfoBlockBox2 {
+        width: 48%;
+    }
+
+    .contact_InfoBlockBox1 {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .contact_mapBlock , .contact_formBlock  {
+        height: 430px;
+    }
+
+    .contact_formBlock form .form_item textarea {
+        height: 165px;
+    }
+
+    .pricng_blockBox {
+        padding: 20px;
+    }
+
+    .pricng_block{
+        flex-wrap: wrap;
+    }
+
+    .pricng_blockBox {
+        width: 48%;
+    }
+
+    .pricng_blockBoxLast {
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .header_content{
+       width: 40%;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 44px;
+    }
+
+    .header_content p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .header {
+        padding-top: 50px;
+    }
+    
+    .header_image {
+        width: 60%;
+    }
+    
+    .services_block_box {
+        width: 45%;
+    }
+
+    .secTitle {
+        font-size: 33px;
+    }
+
+    .services_block_box h6 {
+        font-size: 23px;
+    }
+}
+
+@media(max-width:750px){
+    .about_blockContent h6 {
+        font-size: 24px;
+    }
+
+    .about_blockContent p {
+        font-size: 12px;
+    }
+
+    .lastText {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:670px){
+    .section {
+        padding: 20px 20px;
+    }
+
+    .nav ul li a {
+        font-size: 14px;
+    }
+
+    .iqons_block{
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .about_blockImg img {
+        height: 390px;
+    }
+
+    .iqons_blockBox{
+        width: 40%;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 38px;
+    }
+
+    .nav ul {
+      gap: 12px;
+    }
+
+    .header_content h1 {
+        font-size: 25px;
+    }
+
+    .header_content p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .header_image {
+        width: 68%;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+}
+
+@media(max-width:605px){
+    .header_content h1 {
+        font-size: 22px;
+    }
+
+    .header_content p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .section {
+        padding: 20px 15px;
+    }
+
+    .about_blockContent h6 {
+        font-size: 22px;
+    }
+
+    .about_blockContent p {
+        font-size: 10px;
+    }
+
+    .iqons_block i {
+      
+        height: 30px;
+        width: 30px;
+        line-height: 25px;
+        font-size: 15px;
+    }
+
+    .iqons_blockBox h3 {
+    font-size: 10px;
+    }
+}
+
+@media(max-width:576px){
+    .reviewClents_infoBlock {
+        flex-direction: row;
+    }
+
+    .contact_infoBlock {
+        flex-direction: column;
+    }
+
+    .contact_mapBlock, .contact_formBlock {
+        width: 100%;
+        height: 450px;
+    }
+    
+    .contact_map_inputBlock{
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
+
+    .contact_InfoBlockBox2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact_InfoBlockBox1 {
+        margin-top: 0;
+    }
+
+    .nav ul{
+        position: absolute;
+        top: 115%;
+        right: 20px;
+        background: #fff;
+        box-shadow: var(--box-shadow);
+        border: var(--border);
+        border-radius: 0.5rem;
+        width: 35%;
+        transform: scale(0);
+        transform-origin: top right;
+        opacity: 0;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .pricng_blockBox {
+        width: 100%;
+    }
+
+    .pricng_blockBoxLast1 {
+        margin-top: 20px;
+    }
+
+    .nav ul {
+        gap: 20px;
+    }
+
+    .nav ul li a {
+        font-size: 18px;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 35px;
+    }
+
+    #menuBtn {
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+        background-color: var(--bg);
+        color: var(--main-color);
+        font-size: 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    #menuBtn:hover{
+        color: white;
+        background-color: var(--main-color);
+    }
+
+    .header_block, .about_block{
+        flex-direction: column;
+    }
+
+    .about_blockContent{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_blockContent h6 {
+        font-size: 28px;
+        padding-top: 20px;
+
+    }
+
+    .about_blockContent p {
+        font-size: 14px;
+    }
+
+    .iqons_blockBox h3 {
+        font-size: 12px;
+    }
+
+    .about_blockImg, .about_blockContent {
+        width: 85%;
+    }
+
+    .services_block_box {
+        width: 50%;
+    }
+
+    .header_content, .header_image {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        padding-top: 170px;
+    }
+
+    .header_cloud-2 {
+        height: 160px !important;
+    }
+
+    .header_cloud-1 {
+       height: 190px !important;
+     }
+
+     .header_content h1 {
+        font-size: 33px;
+        text-align: center;
+    }
+
+    .header_content p {
+        font-size: 16px;
+        text-align: center;
+    }
+    .btn {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+
+    .iqons_block i {
+        height: 50px;
+        width: 50px;
+        line-height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:490px){
+    .services_block_box {
+        width: 60%;
+    }
+
+    .nav ul {
+        width: 45%;
+    }
+
+    .btn {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:430px){
+    .header_image img {
+        height: 450px;
+    }
+
+    .nav ul {
+        width: 45%;
+    }
+
+    .services_block_box {
+        width: 74%;
+    }
+
+    .header_cloud-2 {
+        height: 100px !important;
+    }
+
+    .header_cloud-1 {
+        height: 150px !important;
+    }
+
+    .about_blockImg, .about_blockContent {
+        width: 90%;
+    }
+
+    .footer_block {
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    .footer_blockBox {
+        width: 100%;
+    }
+
+    .footer_blockBox h4 {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    .footer_blockBox ul li {
+        padding: 3px 0;
+    }
+
+    .lastText {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+}
+
+@media(max-width:360px){
+    .header_content p {
+        font-size: 12px;
+    }
+
+    .services_block_box {
+        width: 85%;
+    }
+
+    .header_content h1 {
+        font-size: 28px;
+    }
+
+    #like {
+        font-size: 45px;
+    }
+
+    .pricng_blockBox {
+        padding: 15px;
+    }
+
+    .reviewClents_infoBlock_peopleInfo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media(max-width:320px){
+    .header_image img {
+        height: 340px;
+    }
+
+    .section {
+        padding: 20px 10px;
+    }
+
+    .pricng_blockBox {
+        padding: 10px;
+    }
+
+    #like {
+        display: none;
+    }
+
+    .reviewClents_infoBlock_peopleInfo h6 {
+        font-size: 16px;
+    }
+
+    .portfolio_blockBox span {
+        font-size: 38px;
+    }
+
+    .section {
+        padding: 20px 10px;
+    }
+
+    .services_block_box {
+        width: 100%;
+    }
+
+    .nav ul li a {
+        font-size: 16px;
+    }
+
+    .nav ul {
+        gap: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 55%;
+    }
+
+    .about_blockContent h6 {
+        font-size: 24px;
+    }
+
+    .about_blockContent p {
+        font-size: 12px;
+    }
+
+    .iqons_blockBox h3 {
+        font-size: 11px;
+    }
+
+    .about_blockImg, .about_blockContent {
+        width: 100%;
+    }
+}
+
+@media(max-width:290px){
+    .about_blockContent h6 {
+        font-size: 21px;
+    }
+
+    .contact_mapBlock, .contact_formBlock {
+        width: 100%;
+        height: 340px;
+        padding: 10px;
+    }
+
+    .contact_formBlock form .form_item textarea {
+        height: 120px;
+    }
+    .contact_formBlock form .form_item input, .contact_formBlock form .form_item textarea {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    
+}
